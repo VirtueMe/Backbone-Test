@@ -8,11 +8,6 @@ function ($, _, facade) {
     // Subscribes to: newContentAvailable
 
     facade.subscribe('contentUpdater', 'newContentAvailable', function (context) {
-        var content = context.model.get('content');
-        context.$('.todo-content').text(content);
-        context.input = context.$('.todo-input');
-        context.input.bind('blur', context.close);
-        context.input.val(content);
     });
 
 

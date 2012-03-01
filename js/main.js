@@ -9,6 +9,8 @@ require.config({
 
 });
 
-require(['views/app'], function(AppView){
-  var app_view = new AppView;
+require(['backbone', 'router'], function(Backbone, AppRouter){
+  console.log("AppView");
+  var router = new AppRouter;
+  Backbone.history.start();
 });
