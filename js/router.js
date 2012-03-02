@@ -26,7 +26,7 @@ define([
         handleActiveView : function() {
           if (this.activeView) {
             this.activeView.remove();
-            delete this.activeView();
+            delete this.activeView;
           }
         },
         fallBack: function(path) {
