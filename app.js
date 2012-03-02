@@ -13,6 +13,11 @@ http.createServer(function (request, response) {
     var extname = path.extname(filePath);
     var contentType = 'text/html';
     switch (extname) {
+	case '.png':
+	case '.jpg':
+	case '.jpeg':
+	    contentType = 'Image';
+	    break;
         case '.js':
             contentType = 'text/javascript';
             break;
